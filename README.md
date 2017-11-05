@@ -1,5 +1,6 @@
 # ASSP
 Stand for "A******* sublime-text snippet project"
+
 This is a collection of sublime-text snippets which make our life easier.
 
 ## Install
@@ -10,13 +11,14 @@ $ ./install.sh
 ```
 
 The shell script will take care for the rest.
+
 **Note:** Sorry windows users, we don't have any install script for ya.
 
 ## Usage
 It's very simple to use
 1. Open the Sublime text
-2. Press "Ctr + Shift + P" (Or "Cmd + Shift + P" if you are macOS user)
-3. Type "Set syntax: SQL"
+2. Press `Ctr + Shift + P` (Or `Cmd + Shift + P` if you are macOS user)
+3. Type "Set syntax: SQL" (or just type SQL and search for "Set syntax: SQL")
 4. Type the snippet keyword, press tab to jump over to another keyword
 
 ## Snippet keywords
