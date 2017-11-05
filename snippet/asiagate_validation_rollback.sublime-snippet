@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+-- INC TABLE
+update asiagate.${1:MST}_inc set update_sign = 1 where update_sign >= 0;
+select update_sign, count(*) from asiagate.${1:MST}_inc group by update_sign;
+
+-- MST TABLE
+truncate asiagate.${1:MST};
+insert into asiagate.${1:MST} select * from backup.${1:MST}_hanoi_${2:BACKUP_DATE};
+
+-- ERR TABLE
+create table backup.${1:MST}_err_hanoi_${3:CURR_DATE} like asiagate.${1:MST}_err;
+insert into backup.${1:MST}_err_hanoi_${3:CURR_DATE} select * from asiagate.${1:MST}_err;
+truncate asiagate.${1:MST}_err;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>val_rollback</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

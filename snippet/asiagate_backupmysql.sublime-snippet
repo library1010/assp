@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+create table backup.${1:ORIGINAL}_hanoi_${2:CURR_DATE} like asiagate.${1:ORIGINAL};
+insert into backup.${1:ORIGINAL}_hanoi_${2:CURR_DATE} select * from asiagate.${1:ORIGINAL};
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>backup</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.sql</scope> -->
+</snippet>
