@@ -15,7 +15,8 @@ insertEntry() {
 
     sed -i.bak "s/^\]$/\t{\"keys\": [\"$keybinding\"], \"command\": \"$keyword\" },/" "$filename" && rm "$filename.bak"
     checkError $? "Cannot change the file $filename using sed"
-    echo "\n]" >> "$filename"
+    echo "" >> "$filename"
+    echo "]" >> "$filename"
     checkError $? "Cannot append the file $filename"
     sed -i.bak "/^\s*$/d" "$filename" && rm "$filename.bak"
     checkError $? "Cannot change the file $filename using sed"
@@ -28,8 +29,8 @@ installMacOsEntries() {
 }
 
 installLinuxEntries() {
-    insertEntries add_date "control+shift+," "$KEYMAP_FILE"
-    insertEntries today "control+shift+." "$KEYMAP_FILE"
+    insertEntries add_date "ctrl+shift+," "$KEYMAP_FILE"
+    insertEntries today "ctrl+shift+." "$KEYMAP_FILE"
 }
 
 doMain() {
