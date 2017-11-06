@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+-- ${2:TABLE_NAME}
+update asiagate.${1:SPLR_NAME}_${2:TABLE_NAME} set update_sign = 1 where delivery_date = '${3:DELIVERY_DATE}';
+delete from asiagate.asiagate_${2:TABLE_NAME} where splr_id = ${4:SPLR_ID};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>conv_rollback</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
