@@ -28,3 +28,7 @@ Here's the list of keywords you can use until now:
 2. **val_result_check**
 3. **val_rollback**
 4. **conv_rollback**
+
+## Sublime keybinding
+We also provide a brand new key binding to insert the today date (in yyyyMMdd format)
+All you need to do is press `Ctr + Shift + .` (Or `Cmd + Shift + .` if you are macOS user).
